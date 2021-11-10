@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]='signUpForm' (ngSubmit)="PostData(signUpForm)">
+<div class="formgroup">
+  <label for="firstName"> First Name </label>
+  <input type="text" name="firstName" formControlName="FirstName" required placeholder="Enter First Name"/>
+</div><div>
+  <label for="txtLastName"> Enter Last Name</label>
+  <input type="text" name="txtLastName" formControlName="LastName"  required placeholder="Enter Last Name"/>
+ 
+</div>
+
+<div>
+  <label for="txtEmail"> Enter EMail </label>
+  <input type="text" name="txtEmail" formControlName="Email"  required placeholder="Enter EMail"/>
+ 
+</div>
+
+<div>
+  <label for="txtPassword"> Enter Password</label>
+  <input type="text" name="txtPassword" formControlName="Password"  required placeholder="Enter Password"/>
+ 
+</div>
+
+<button type="submit"> Submit </button>
+  </form>
+</div>

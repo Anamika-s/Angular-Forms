@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="row">
+    <form #refForm='ngForm' (ngSubmit)="Add(refForm)">
+      <div>
+        <label for="txtNo1"> Enter Number 1 </label>
+        <input type="number" name="txtNo1" required ngModel #no1="ngModel">
+        <div class="alert alert-danger" *ngIf="no1.touched && no1.invalid">
+          {{no1.className}}
+          No1 is must
+        </div>
+      </div>
+      <div>
+        <label for="txtNo2"> Enter Number 2 </label>
+        <input type="number" name="txtNo2" required ngModel #no2="ngModel"/>
+        <div class="alert alert-danger" *ngIf="no2.touched && no2.invalid">
+          {{no2.className}}
+          No2 is must
+        </div>
+      </div>
+      <div>
+        <label for="txtResult"> Result </label>
+        <input type="number" name="txtResult" ngModel [value]="result"/>
+      </div>
+      <button type="submit"> Add </button>
+    </form>
+  </div>
+</div>
